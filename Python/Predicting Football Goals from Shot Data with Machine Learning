@@ -1,0 +1,34 @@
+# Predicting Football Goals from Shot Data with Machine Learning
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+
+# Functions to clean up workflow steps
+def load_data(csv_file):
+    df = pd.read_csv(csv_file) 
+    return df
+
+def add_features(df):
+    # Engineering functions
+    return df
+
+def train_model(X, y):
+   # Fit and return model
+    return model
+
+# Main workflow    
+df = load_data('epl_data.csv')  
+
+team_df = df[df['team'] == 'Arsenal']  
+
+team_df = add_features(team_df)
+
+X = # Features
+y = # Target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y)  
+
+model = train_model(X_train, y_train)
+
+# Evaluate and predict
