@@ -1,5 +1,5 @@
-Argentina's 2022 World Cup Analysis
-Overview
+# Argentina's 2022 World Cup Analysis
+## Overview
 This repository contains a series of R scripts designed to pull, analyze, and visualize various aspects of Argentina's performance in the 2022 FIFA World Cup. Each script focuses on a specific aspect, offering insights into key player contributions, team statistics, and tactical analysis.
 
 1. Messi_wc_passes.R
