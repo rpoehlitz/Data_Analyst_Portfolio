@@ -5,6 +5,7 @@
 # Load necessary libraries
 library(tidyverse)
 library(ggplot2)
+library(SBpitch)
 library(StatsBombR)
 
 # Retrieve data for the FIFA World Cup 2022
@@ -55,3 +56,4 @@ create_Pitch() +
   coord_fixed(ratio = 105/100) +
   scale_color_gradient(low = "red", high = "green", na.value = "grey") +
   theme(legend.position = "bottom")  # Optionally, move the legend to the bottom
+
