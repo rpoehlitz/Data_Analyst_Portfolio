@@ -1,14 +1,14 @@
 # Data_Analyst_Portfolio
 Description:
-Welcome to DataMinds Showcase, where I unveil a collection of my data-driven projects showcasing a fusion of creativity, analytical prowess, and problem-solving skills. This repository provides a glimpse into my diverse expertise, ranging from scraping and cleaning Premier League data to optimizing macronutrient intake with a Chipotle linear programming model. Let's take a closer look at the highlights:
+Welcome to my Data Analysis Showcase, where I unveil a collection of my data-driven projects showcasing a fusion of creativity, analytical prowess, and problem-solving skills. This repository provides a glimpse into my diverse expertise, ranging from scraping and cleaning Premier League data to optimizing macronutrient intake with a Chipotle linear programming model. Let's take a closer look at the highlights:
 
 Excel Projects:
 
 Premier League Simulation:
 Dive into the world of football analytics with my Premier League simulation project. By scraping and cleaning data, I've created a powerful Poisson distribution model that simulates Premier League games over 100,000 times. This innovative approach uses expected goals to derive the probability of each team's success, providing a unique perspective on match outcomes.
 
-Chipotle Linear Programming:
-Explore my application of linear programming to optimize macronutrient intake at Chipotle. This project not only minimizes cost but also ensures an ideal balance of nutrients. It's a practical example of leveraging mathematical modeling for real-world decision-making, combining the worlds of data analysis and nutrition.
+Athlete Performance Dashboard:
+A powerful coaching companion, providing a centralized hub for real-time insights into athlete metrics. With dynamic features allowing coaches to analyze and compare individual performance tests against team averages or specific positions, this tool revolutionizes performance optimization strategies in a user-friendly interface.
 
 Athlete Performance Visualization:
 Uncover a visually engaging radar-style graph designed for coaches. This Excel project allows coaches to compare their athletes' performance tests against the entire team or specific positions. The visualization provides valuable insights for optimizing training strategies and enhancing team performance.
