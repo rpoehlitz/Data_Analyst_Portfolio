@@ -32,8 +32,17 @@ passes = ArgEvents %>%
       pass.end_location.y >= 18
   )
 
+# Calculate Stats
+pass_stats <- passes %>% 
+  summarise(
+    n=n(),
+    yards = mean(pass.length),
+    assists = sum(is.na(pass.goal_assist)),
+  
+  )
+
 # Create a pitch and plot Messi's completed box passes
-create_Pitch() +
+plot1 <- create_Pitch() +
   geom_segment(
     data = passes,
     aes(
@@ -57,3 +66,25 @@ create_Pitch() +
   scale_color_gradient(low = "red", high = "green", na.value = "grey") +
   theme(legend.position = "bottom")  # Optionally, move the legend to the bottom
 
+plot2 <- ggplot(data = pass_stats, mapping = aes(x = "", y = yards)) +
+  geom_col() +
+  
+  
+  geom_text(
+    aes(label = paste0("Summary Stats")),
+    color = "gold",
+    vjust = 1,
+    size = 4
+  ) +
+  geom_text(
+    aes(label = paste0("Assists: \n", assists)),
+    color = "white",
+    vjust = 3,
+    size = 4
+  ) +
+  theme(
+    text = element_text(size = unit(4, "mm"))  # Adjust the size dynamically
+  )
+
+library(cowplot)
+plot_grid(plot1,plot2,ncol = 2,rel_widths = c(2,1))
