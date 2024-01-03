@@ -58,11 +58,11 @@ def plot_xG_chart(h_df, a_df, hteam, ateam, h_goal, a_goal, h_total, a_total, h_
         y = h_goal['h.cumult'][j]
     
         x_offset = 15
-        y_offset = 15
+        y_offset = 15 if y + 15 < y_max else -15
         
-        # Keep label inside the axes
-        if y + y_offset > y_max:
-            y_offset = -15
+        if x + x_offset > 90:
+            x_offset = -30 
+       
             
         
                 
@@ -76,12 +76,10 @@ def plot_xG_chart(h_df, a_df, hteam, ateam, h_goal, a_goal, h_total, a_total, h_
         y = a_goal['a.cumult'][i]
         
         x_offset = 15
-        y_offset = 15
-        
-        # Keep label inside the axes
-        if y + y_offset > y_max:
-            y_offset = -15
-        
+        y_offset = 15 if y + 15 < y_max else -15  
+
+        if x + x_offset > 90:
+            x_offset = -150  
         
         
         ax.annotate(txt, (x, y), xycoords='data', xytext=(x_offset, y_offset), 
@@ -149,14 +147,14 @@ def main():
 
     if filter_choice == 1:
         # Filter by date range
-        min_date = matches['match_date'].min().strftime('%Y-%m-%d')
-        max_date = matches['match_date'].max().strftime('%Y-%m-%d')
+        min_date = pd.to_datetime(matches['match_date']).min().strftime('%Y-%m-%d')
+        max_date = pd.to_datetime(matches['match_date']).max().strftime('%Y-%m-%d')
 
         print(f"Date Range: {min_date} to {max_date}")
         start_date = pd.to_datetime(input(f"Enter the start date (YYYY-MM-DD, default {min_date}): ") or min_date, errors='coerce')
         end_date = pd.to_datetime(input(f"Enter the end date (YYYY-MM-DD, default {max_date}): ") or max_date, errors='coerce')
 
-        matches = matches[(matches['match_date'] >= start_date) & (matches['match_date'] <= end_date)]
+        matches = matches[(pd.to_datetime(matches['match_date']) >= start_date) & (pd.to_datetime(matches['match_date']) <= end_date)]
     elif filter_choice == 2:
         # Filter by teams
         unique_teams = pd.concat([matches['home_team'], matches['away_team']]).unique()
