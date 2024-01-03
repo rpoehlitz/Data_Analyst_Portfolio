@@ -1,6 +1,6 @@
 # Data_Analyst_Portfolio
 Description:
-Welcome to my Data Analysis Showcase, where I unveil a collection of my data-driven projects showcasing a fusion of creativity, analytical prowess, and problem-solving skills. This repository provides a glimpse into my diverse expertise, ranging from scraping and cleaning Premier League data to optimizing macronutrient intake with a Chipotle linear programming model. Let's take a closer look at the highlights:
+Welcome to my Data Analysis Showcase, where I unveil a collection of my data-driven projects showcasing a fusion of creativity, analytical prowess, and problem-solving skills. This repository provides a glimpse into my diverse expertise, ranging from scraping and cleaning Premier League data to optimizing Athlete Performance. Let's take a closer look at the highlights:
 
 Excel Projects:
 
